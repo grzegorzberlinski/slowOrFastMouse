@@ -21,22 +21,14 @@ let previousPosition = {
 
 let positionLog = [currentPosition, previousPosition];
 
-function checkDifference(){ //TOFIX X POSITION
-    if (Math.abs(currentPosition.valueX - previousPosition.valueX) > 20){
+function checkDifference(){
+    if (Math.abs(currentPosition.valueX - previousPosition.valueX) > 50 || Math.abs(currentPosition.valueY - previousPosition.valueY) > 50){
         result.textContent = 'fast';
         document.body.style.background = '#fd6769';
     }else{
         result.textContent = 'slow';
         document.body.style.background = '#66c2ff';
     }
-    if (Math.abs(currentPosition.valueY - previousPosition.valueY) > 20){
-        result.textContent = 'fast';
-        document.body.style.background = '#fd6769';
-    }else{
-        result.textContent = 'slow';
-        document.body.style.background = '#66c2ff';
-    }
-    console.log(`${currentPosition.valueX} and ${previousPosition.valueX}`)
 }
 
 setInterval(function () {
