@@ -4,41 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>slowOrFastUser</title>
-    <script>
-        'use strict';
-
-        let pointerX;
-        let pointerY;
-        document.onmousemove = function (event) {
-            pointerX = event.pageX;
-            pointerY = event.pageY;
-        }
-
-        let currentPosition = {
-            'name': 'currentPosition',
-            'valueX': null,
-            'valueY': null
-        }
-        let previousPosition = {
-            'name': 'previousPosition',
-            'valueX': null,
-            'valueY': null
-        }
-        let positionLog = [currentPosition, previousPosition];
-
-        setInterval(function () {
-            previousPosition.valueX = currentPosition.valueX;
-            currentPosition.valueX = pointerX;
-            previousPosition.valueY = currentPosition.valueY;
-            currentPosition.valueY = pointerY;
-            console.log(`currentPosition: x: ${currentPosition.valueX} y: ${currentPosition.valueY} previousPosition: x: ${previousPosition.valueX} y: ${previousPosition.valueY}`)
-        }, 200)
-    </script>
+    <title>slowOrFastMouse</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    <h1><span id="result"></span> mouse</h1>
+    <script src="script.js"></script>
 </body>
 
 </html>

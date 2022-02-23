@@ -1,0 +1,2 @@
+## slowOrFastMouse - simple onmousemove() app
+This project is about measuring the difference between the user's current and previous mouse position using the onmousemove() function with mouse location parameters stored in two objects (currentPosition and previousPosition) calling checkDifference() function.
